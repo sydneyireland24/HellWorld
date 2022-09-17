@@ -1,7 +1,6 @@
 #include <time.h>
 #include <stdlib.h>
 #include <stdio.h>
-
 //return 0 if not equal, 1 if equal
 int checkEqual(char * LHS, char * RHS, int len)
 {
@@ -21,13 +20,10 @@ int checkEqual(char * LHS, char * RHS, int len)
             }
         }
     }
-
     if(result == 0)
         return false;
-
     if(result == 1)
         return true;
-
     return false;
 }
 
@@ -49,7 +45,6 @@ int main()
             printf("\n");
             begin = clock();
         }
-
         int lengthOfHelloWord = 1;
         for(int i = -2147483648; i < 2147483647; ++i)
         {
@@ -58,10 +53,8 @@ int main()
                 lengthOfHelloWord = lengthOfHelloWord + 1;
             }
         }
-
         char * helloWorldExpected;
         helloWorldExpected = (char*)malloc(lengthOfHelloWord * sizeof(char));
-
         for(int i = -2147483648; i < 2147483647; ++i)
         {
             if(i >= 0 && i <= 12)
@@ -120,10 +113,8 @@ int main()
                 }
             }
         }
-
         char * helloWorldResult;
         helloWorldResult = (char*)malloc(lengthOfHelloWord * sizeof(char));
-
         for(int i = -2147483648; i < 2147483647; ++i)
         {
             if(i >= 0 && i <= lengthOfHelloWord)
@@ -136,16 +127,12 @@ int main()
             }
         }
         helloWorldResult[12] = '\0';
-
         printf("%s", helloWorldResult);
         printf("\n");
-
         equal = checkEqual(helloWorldResult, helloWorldExpected, lengthOfHelloWord);
-
         free(helloWorldResult);
         free(helloWorldExpected);
         runCounter = runCounter + 1;
     }while (equal != 1);
-
     printf("Congratulations! You actually printed Hello World!");
 }
