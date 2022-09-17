@@ -12,6 +12,9 @@ It should eventually print out "Hello World!". The universe will probably die be
 ## How we built it
 Hopes, dreams, the programming language c, and CLion.
 
+## How to run it
+You can either clone the repo, and run the project from your IDE of choice (so long as you have a c compiler and cmake installed). Or, you can just download the .c file, and run it either on your favorite IDE, or on an online IDE if you're about that life. 
+
 ## Challenges we ran into
 I forgot some of the formatting flags for C print statements because I haven't worked with C since Operating Systems.
 
