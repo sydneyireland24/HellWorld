@@ -20,6 +20,7 @@ I forgot some of the formatting flags for C print statements because I haven't w
 
 ## Accomplishments that we're proud of
 I cannot believe I got one attempt at printing "Hello World!" to take on average 32.17 seconds. 
+As seen in my IEEE formatted paper, statistically, the time it would take for this program to run successfully would be 4.858 * 10^17  years (see paper for calculations). That is well beyond my lifetime. and the lifetime of the known universe probably. 
 
 ## What we learned
 Human curiosity and the motivation of enjoyment are quite the fire starters for making such a convoluted project. 
