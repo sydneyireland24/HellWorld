@@ -1,4 +1,6 @@
-//
-// Created by sydne on 9/16/2022.
-//
+#include <stdlib.h>
+#include <stdio.h>
 
+int main(){
+    printf("Hello World!\n");
+}

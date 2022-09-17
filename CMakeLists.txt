@@ -3,5 +3,4 @@ project(HellWorld C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(HellWorld
-        HellWorld.c)
+add_executable(HellWorld HellWorld.c)
