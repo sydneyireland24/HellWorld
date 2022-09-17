@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/sydne/Desktop/ComputerScienceShiz/UrANerdLol/HellWorld/HellWorld.c
+time.h
+-
+stdlib.h
+-
+stdio.h
+-
+
