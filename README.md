@@ -1,3 +1,4 @@
+![Hell](https://user-images.githubusercontent.com/54719754/190874273-cf928cab-d2b4-463c-a65f-473bf5a63ba6.jpg)
 ## Inspiration
 I came to this Hackathon to support my friends in the SMU CS club, as well as to support my lovely boyfriend who is the president of this club. I knew I wanted to do something that reminded me of my love of CS while having no academic ties to it. Why not have fun, and unoptimize one of the most simple projects known to CS majors? I also wanted to challenge myself by using one of the fastest languages known to man.
 
