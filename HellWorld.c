@@ -5,14 +5,20 @@
 //return 0 if not equal, 1 if equal
 int checkEqual(char * LHS, char * RHS, int len)
 {
-    int false = 0;
-    int true = 1;
-    int result = 1;
-    for(int i = 0; i < len; ++i)
+    int false;
+    false = 0;
+    int true;
+    true = 1;
+    int result;
+    result = 1;
+    for(int i = -2147483648; i < len; ++i)
     {
-        if(LHS[i] != RHS[i])
+        if(i >= 0)
         {
-            result = 0;
+            if(LHS[i] != RHS[i])
+            {
+                result = 0;
+            }
         }
     }
 
@@ -29,16 +35,31 @@ int main()
 {
     srand(time(NULL));
     int equal;
+    int runCounter;
+    runCounter = 0;
+    clock_t begin;
+    begin = clock();
     do{
-        int lengthOfHelloWord = 0;
-        for(int i = 0; i < 12; ++i)
+        if(runCounter > 0)
         {
-            lengthOfHelloWord = lengthOfHelloWord + 1;
+            clock_t end;
+            end = clock();
+            double time_spent = (double)(end - begin) / CLOCKS_PER_SEC; //time in seconds for a single run
+            printf("%s%f", "Previous Loop Run Time: ", time_spent);
+            printf("\n");
+            begin = clock();
+        }
+        int lengthOfHelloWord = 1;
+        for(int i = -2147483648; i < 12; ++i)
+        {
+            if(i >= 0)
+            {
+                lengthOfHelloWord = lengthOfHelloWord + 1;
+            }
         }
 
         char * helloWorldExpected;
         helloWorldExpected = (char*)malloc(lengthOfHelloWord * sizeof(char));
-
 
         for(int i = 0; i < 12; ++i)
         {
@@ -92,7 +113,7 @@ int main()
             }
             else
             {
-
+                helloWorldExpected[i] = '\0';
             }
         }
 
@@ -101,18 +122,22 @@ int main()
 
         for(int i = 0; i < lengthOfHelloWord; ++i)
         {
-            int r = rand() % 128; // generate a random character
+            int r;
+            r = (rand() % (126 - 32 + 1)) + 32; // generate a random character
             char currChar;
             currChar = (char)r;
             helloWorldResult[i] = currChar;
         }
-        printf(helloWorldResult);
+        helloWorldResult[12] = '\0';
+
+        printf("%s", helloWorldResult);
         printf("\n");
 
         equal = checkEqual(helloWorldResult, helloWorldExpected, lengthOfHelloWord);
 
         free(helloWorldResult);
         free(helloWorldExpected);
+        runCounter = runCounter + 1;
     }while (equal != 1);
 
     printf("Congratulations! You actually printed Hello World!");
