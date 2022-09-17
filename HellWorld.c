@@ -22,13 +22,14 @@ int checkEqual(char * LHS, char * RHS, int len)
     if(result == 1)
         return true;
 
+    return false;
 }
 
 int main()
 {
+    srand(time(NULL));
     int equal;
     do{
-        srand(time(NULL));
         int lengthOfHelloWord = 0;
         for(int i = 0; i < 12; ++i)
         {
@@ -102,13 +103,17 @@ int main()
         {
             int r = rand() % 128; // generate a random character
             char currChar;
-            currChar = r + '0';
+            currChar = (char)r;
             helloWorldResult[i] = currChar;
         }
+        printf(helloWorldResult);
+        printf("\n");
 
         equal = checkEqual(helloWorldResult, helloWorldExpected, lengthOfHelloWord);
 
         free(helloWorldResult);
         free(helloWorldExpected);
     }while (equal != 1);
+
+    printf("Congratulations! You actually printed Hello World!");
 }
